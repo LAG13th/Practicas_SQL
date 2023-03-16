@@ -67,7 +67,12 @@ where p.nombre is null and p2.sexo='H';
 
 
 -- Parte 10
-
+SELECT h.nombre hermano1, h2.nombre hermano2, h.n_padre n_padre
+FROM personas h
+CROSS JOIN personas h2
+WHERE h.n_padre=h2.n_padre AND h.n_persona>h2.n_persona;
 
 -- Parte 11
-
+SELECT h.nombre hermano1, h2.nombre hermano2, p.nombre padre
+FROM personas h
+JOIN personas h2
